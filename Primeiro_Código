@@ -1,0 +1,112 @@
+#include <iostream>
+
+// Padronização std
+using namespace std;
+
+// Código main
+int main() { // Primeiro chave do main
+
+    // Variáveis 
+    int opcao;
+
+    // Entrada de dados
+    cout << "1. Adição\n";
+    cout << "2. Subtração\n";
+    cout << "3. Multiplicação\n";
+    cout << "4. Divisão\n";
+    cout << "Digite a opção desejada..: ";
+    cin >> opcao;
+
+    // Quebra de linha 
+    cout << endl;
+
+    // Variáveis
+    float valor1, valor2, soma, sub, multi, div;
+
+    do { // Primeira chave do Do-While
+    // Switch de opções
+    switch (opcao) { // Primeira chave do Switch
+        // Adição
+        case 1:
+            // Entrada de dados
+            cout << "Digite o valor 1..: ";
+            cin >> valor1;
+            cout << "Digite o valor 2..: ";
+            cin >> valor2;
+
+            // Soma
+            soma = valor1 + valor2;
+
+            // Saída de dados
+            cout << "\nO valor da soma é..: " << soma << endl;
+            break;
+        // Subtração
+        case 2:
+            // Entrada de dados
+            cout << "Digite o valor 1..: ";
+            cin >> valor1;
+            cout << "Digite o valor 2..: ";
+            cin >> valor2;
+            
+            // Subtração 
+            sub = valor1 - valor2;
+
+            // Saída de dados
+            cout << "\nO valor da subtração é..: " << sub << endl;
+            break;
+        // Multiplicação
+        case 3:
+            // Entrada de dados
+            cout << "Digite o valor 1..: ";
+            cin >> valor1;
+            cout << "Digite o valor 2..: ";
+            cin >> valor2;
+
+            // Multiplicação
+            multi = valor1 * valor2;
+
+            // Saída de dados
+            cout << "\nO valor da multiplicação é..: " << multi << endl;
+            break;
+        // Divisão
+        case 4:
+            // Entrada de dados
+            cout << "Digite o valor 1..: ";
+            cin >> valor1;
+            cout << "Digite o valor 2..: ";
+            cin >> valor2;
+
+            // Divisão
+            div = valor1 / valor2;
+
+            // Saída de dados
+            cout << "\nO resultado da divisão é..: " << div << endl;
+            break;
+
+    } // Última chave do Switch
+
+    // Variável 
+    char resposta;
+
+    // Entrada de dados
+    cout << "\nDeseja continuar? (s/n)..: \n";
+    cin >> resposta;
+
+    // Quebra de linha
+    cout << endl;
+
+    // Comando de comparação das respostas
+    if (resposta == 's' || resposta == 'S') {
+        return main();
+    }
+    if (resposta == 'n' || resposta == 'N') {
+        break;
+    }
+
+    // While de continuidade
+    } while(1); // Última chave do Do-While
+
+    // Fim do programa
+    cout << "\nFim do programa!\n";
+
+} // Últma chave do main
